@@ -6,7 +6,7 @@
 
 > <a href="https://github.com/CB279/vue-3-cb-grid">grid</a>
 
-> <a href="https://github.com/CB279/vue-3-cb-datepicker">datepicker</a>
+> <a href="https://github.com/CB279/vue-3-cb-modal">modal</a>
 
 > <a href="https://github.com/CB279/vue-3-cb-select">select</a>
 
