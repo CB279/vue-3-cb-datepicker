@@ -138,8 +138,8 @@ createApp(app).use(datepicker, {
 });
 
 //use
-// import moment from "moment"; //ไม่รองรับ พ.ศ.
-import $moment from "$moment"; //รองรับ พ.ศ.
+// const moment = inject("moment"); //ไม่รองรับ พ.ศ.
+const $moment = inject("$moment"); //รองรับ พ.ศ.
 
 console.log("วันที่ ", $moment().format("DD/MM/YYYY"));
 ```
