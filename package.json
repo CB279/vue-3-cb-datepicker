@@ -1,6 +1,6 @@
 {
     "name": "@vue-cb/datepicker",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "vue 3,datepicker",
     "main": "lib/index.js",
     "directories": {
@@ -25,6 +25,6 @@
     "homepage": "https://github.com/CB279/vue-3-cb-datepicker#readme",
     "dependencies": {
         "moment": "^2.29.1",
-        "popper.js": "^1.16.1"
+        "@popperjs/core": "^2.9.0"
     }
 }
