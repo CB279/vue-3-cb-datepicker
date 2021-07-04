@@ -80,6 +80,7 @@ export default ({ active, dateMin, dateMax }) => {
     };
 
     const selectYear = sl => {
+        if (props.disabled) return;
         // const value = sl.item.value;
         // if (disabled(value)) return;
         state.year = sl.item.value;

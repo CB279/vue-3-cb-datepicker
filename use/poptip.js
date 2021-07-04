@@ -47,13 +47,13 @@ export default (props, { select } = {}) => {
         state.show = !state.show;
         if (select && state.show) {
             nextTick(() => {
-                state.tool.children.forEach(n => {
+                for (const n of state.tool.children) {
                     if (n.classList.contains("select")) {
                         state.tool.scrollTop =
                             n.offsetTop -
                             (state.tool.clientHeight / 2 - n.clientHeight / 2);
                     }
-                });
+                }
             });
         }
     };

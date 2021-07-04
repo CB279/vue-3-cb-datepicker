@@ -1,5 +1,5 @@
 <template>
-    <div class="cb--datepicker-picker">
+    <div :class="['cb--datepicker-picker', 'is-datepicker-disabled-' + disabled]">
         <div class="cb--datepicker-header">
             <div :class="['cb--datepicker-prev', disabled_prev]" @click="prev">
                 <div></div>
@@ -22,6 +22,9 @@
 import { computed, inject } from "vue";
 
 export default {
+    props: {
+        disabled: Boolean
+    },
     setup(props, { emit }) {
         const isPrev = inject("isPrev");
         const isNext = inject("isNext");

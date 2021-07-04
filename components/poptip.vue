@@ -2,7 +2,7 @@
     <div :ref="pop" class="cb-poptip">
         <slot name="input" :toggle="toggle">
             <div
-                :class="['cb-poptip-placeholder', 'is-selected-' + isSelected]"
+                :class="['cb-poptip-placeholder', 'is-selected-' + isSelected, 'is-datepicker-disabled-' + disabled]"
                 @click="toggle"
             >
                 <div class="cb-poptip-text">
@@ -26,7 +26,8 @@ import poptip from "../use/poptip";
 export default {
     props: {
         isSelected: Boolean,
-        placement: String
+        placement: String,
+        disabled: Boolean
     },
     setup(props, { emit }) {
         const usePoptip = poptip(props);

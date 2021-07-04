@@ -1,5 +1,5 @@
 <template>
-    <picker :ref="dEl" @prev="prev" @next="next">
+    <picker :ref="dEl" :disabled="disabled" @prev="prev" @next="next">
         <template #header>
             <custom-select :item="monthSelect" :items="dataMonth" class="month">
                 <template #li="sl">
@@ -122,6 +122,7 @@ export default {
         max: [String, Number, Object],
         today: Boolean,
         disable: Function,
+        disabled: Boolean,
         hours: Array,
         minutes: Array,
         stepping: Number,
@@ -396,6 +397,7 @@ export default {
         });
 
         const select = item => {
+            if (props.disabled) return;
             if (props.time && !props.now && dataTime.data) {
                 let [hours, minutes] = dataTime.value.split(":");
                 let data = __moment__(

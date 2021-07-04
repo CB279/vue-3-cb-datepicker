@@ -178,6 +178,7 @@ export default (props, { emit }) => {
     };
 
     const selectHour = sl => {
+        if (props.disabled) return;
         const HH = sl.item.value;
         if (disabled(HH, "HH")) return;
         let mm = minuteSelect.value || "00";
@@ -190,6 +191,7 @@ export default (props, { emit }) => {
     };
 
     const selectMinute = sl => {
+        if (props.disabled) return;
         const val = +`${hourSelect.value || "00"}${sl.item.value}`;
         if (disabled(val, "ts") || disableMinutes.value) return;
         const value = `${active.value.HH || "00"}:${sl.item.value}`;

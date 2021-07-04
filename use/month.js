@@ -47,6 +47,7 @@ export default ({ active, dateMin, dateMax }) => {
     };
 
     const selectMonth = (year, sl) => {
+        if (props.disabled) return;
         // const value = sl.item.value;
         // const YYYYMM = `${year}${value}`;
         // if (disabled(YYYYMM)) return;

@@ -82,7 +82,8 @@ export default {
         min: [String, Number, Object],
         max: [String, Number, Object],
         today: Boolean,
-        disable: Function
+        disable: Function,
+        disabled: Boolean
     },
     setup(props, { attrs, emit }) {
         const active = computed(() => {

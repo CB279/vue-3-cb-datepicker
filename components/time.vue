@@ -65,6 +65,7 @@ export default {
             type: String,
             default: "minutes"
         },
+        disabled: Boolean,
         forDate: Boolean
     },
     setup(props, { attrs, emit }) {
