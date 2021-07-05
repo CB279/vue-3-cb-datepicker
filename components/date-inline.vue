@@ -224,9 +224,9 @@ export default {
             }
         });
 
-        const useYear = use_year({ active, dateMin, dateMax });
+        const useYear = use_year(props, { active, dateMin, dateMax });
 
-        const useMonth = use_month({ active, dateMin, dateMax });
+        const useMonth = use_month(props, { active, dateMin, dateMax });
 
         if (active[0]) {
             useYear.state.year = active[0].year;
