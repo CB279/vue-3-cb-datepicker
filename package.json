@@ -1,6 +1,6 @@
 {
     "name": "@vue-cb/datepicker",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "vue 3,datepicker",
     "main": "lib/index.js",
     "directories": {
