@@ -1,7 +1,7 @@
 import { computed, reactive } from "vue";
 import { options, _year_, __moment__ } from "../lib/core.js";
 
-export default ({ active, dateMin, dateMax }) => {
+export default (props, { active, dateMin, dateMax }) => {
     const defaultMonth = parseInt(__moment__().format("MM"));
 
     const state = reactive({
