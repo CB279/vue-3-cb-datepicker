@@ -1,7 +1,7 @@
 import { computed, reactive, watch, watchEffect } from "vue";
 import { options, _year_, __moment__ } from "../lib/core.js";
 
-export default ({ active, dateMin, dateMax }) => {
+export default (props, { active, dateMin, dateMax }) => {
     const defaultYear = parseInt(__moment__().format("YYYY"));
 
     const state = reactive({
